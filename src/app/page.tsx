@@ -20,10 +20,13 @@ import vite from '../../public/skills/icons8-vite-logo-48.png'
 import inote from '../../public/Screenshot 2024-03-10 210612.png'
 import p3 from '../../public/Screenshot 2024-03-10 212913.png'
 import news from '../../public/Screenshot 2024-03-10 220922.png'
-import insta from '../../public/icons8-instagram-50 (1).png'
+// import insta from '../../public/icons8-instagram-50 (1).png'
+import insta from '../../public/skills/instaGif.json'
 import github from '../../public/icons8-github-30.png'
 import tweet from '../../public/icons8-twitterx-50.png'
 import linked from '../../public/icons8-linkedin-50.png'
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+
 
 import Link from 'next/link';
 
@@ -51,10 +54,22 @@ export default function Home() {
       </div>
 
       <div className='z-50 fixed bottom-10 right-10 flex items-center justify-center'>
-        <div className='flex flex-col gap-5'>
+        <div className='flex flex-col'>
           <div className='relative connL rounded-3xl'>
-            <Link target="_blank" className='connL ' href={'https://www.instagram.com/all_this._its_not_me/'}><Image src={insta} alt='insta' width={50} /></Link>
-            <div className='connN opacity-0 -z-10 text-white absolute top-[14px] uppercase -left-12 normal bg-red-600 px-2 rounded-3xl'>
+            {/* <Link target="_blank" className='connL ' href={'https://www.instagram.com/all_this._its_not_me/'}><Image src={insta} alt='insta' width={50} /></Link> */}
+            <Link target="_blank" className='connL ' href={'https://www.instagram.com/all_this._its_not_me/'}>
+            <Player
+  autoplay
+  hover
+  // loop
+  // background='red'
+  src={insta}
+  style={{width: '90px' }}
+>
+  {/* <Controls visible={true} buttons={['play', 'repeat', 'frame', 'debug']} /> */}
+</Player>
+            </Link>
+            <div className='connN opacity-0 -z-10 text-white absolute top-[35px] uppercase -left-8 normal bg-red-600 px-2 rounded-3xl'>
               instagram
             </div>
             </div>
