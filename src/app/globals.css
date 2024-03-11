@@ -2,7 +2,155 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+.logo{
+  font-family: var(--logo-font--);
+}
+
+.normal{
+  font-family: var(--normal-font--);
+}
+
+.normal_900{
+  font-family: var(--normal-font-900--);
+}
+
+.scrolltext{
+  animation:fade-in linear;
+  animation-timeline: view(100px);
+}
+
+@keyframes fade-in {
+  0%{ opacity: 0;}
+  40%{  opacity: 1; translate: -200px;}
+  60%{  opacity: 1; translate: -200px;}
+  100%{  opacity: 0; translate: -200px;}
+}
+
+.scrollimg{
+  animation:aniimg linear;
+  animation-timeline: view(100px);
+}
+
+@keyframes aniimg {
+  0%{ }
+  40%{ translate: 200px;}
+  60%{ translate: 200px;}
+  100%{ translate: 200px;}
+}
+
+.heading{
+  animation:anihead linear forwards;
+  animation-timeline: view();
+}
+
+@keyframes anihead {
+  0%{opacity: 1;}
+  50%{opacity: 1; }
+  80%{opacity: 0; z-index: 10; }
+  100%{opacity: 0; z-index: 10;}
+  
+}
+
+.lampsh:hover .lampimg{
+  opacity: 0.25;
+}
+
+.lampsh:hover .lamptext{
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+  translate: 0rem -3rem;
+  opacity: 1;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(23, 23, 23); 
+  border-radius: 50px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff0000; 
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff; 
+}
+
+
+.connL:hover .connN{
+  translate: -70px;
+  opacity: 1;
+  display: inline;
+  transition: all .5s ease-in-out;
+}
+
+.headingentry1{
+  animation:entryhead .5s linear 1;
+}
+@keyframes entryhead{
+    from{
+      translate: -100%;
+
+    }
+    to{
+
+    }
+}
+
+
+.headingentry2{
+  animation:entryhead2 .5s linear 1;
+}
+@keyframes entryhead2{
+    from{
+      translate: 200%;
+
+    }
+    to{
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +178,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
