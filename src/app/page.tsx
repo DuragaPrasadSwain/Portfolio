@@ -1,34 +1,44 @@
 "use client"
 import Image from 'next/image';
-import profilepic from '../../public/IMG_20231110_180107.jpg'
-import prRealstate from '../../public/fernando-alvarez-rodriguez-M7GddPqJowg-unsplash.jpg'
-import express from '../../public/skills/icons8-express-js-50.png'
-import nextjs from '../../public/skills/icons8-nextjs-48 (1).png'
-import tailwind from '../../public/skills/icons8-tailwind-css-48.png'
-import html from '../../public/skills/pngegg (1).png'
-import css from '../../public/skills/pngegg (2).png'
-import js from '../../public/skills/pngegg (3).png'
-import ts from '../../public/skills/pngegg (4).png'
-import react from '../../public/skills/pngegg (5).png'
-import node from '../../public/skills/pngegg (6).png'
-import mongo from '../../public/skills/pngegg (7).png'
-import redux from '../../public/skills/pngegg (8).png'
-import boot from '../../public/skills/pngegg (9).png'
-import cpp from '../../public/skills/pngegg (10).png'
-import java from '../../public/skills/pngegg (11).png'
-import vite from '../../public/skills/icons8-vite-logo-48.png'
-import inote from '../../public/Screenshot 2024-03-10 210612.png'
-import p3 from '../../public/Screenshot 2024-03-10 212913.png'
-import news from '../../public/Screenshot 2024-03-10 220922.png'
-// import insta from '../../public/icons8-instagram-50 (1).png'
-import insta from '../../public/skills/instaGif.json'
-import github from '../../public/icons8-github-30.png'
-import tweet from '../../public/icons8-twitterx-50.png'
-import linked from '../../public/icons8-linkedin-50.png'
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
-
-
+import { Player } from '@lottiefiles/react-lottie-player';
 import Link from 'next/link';
+
+
+import profilepic from '../../public/IMG_20231110_180107.jpg'
+import inote from '../../public/Screenshot2024-03-10210612.png'
+import p3 from '../../public/Screenshot2024-03-10212913.png'
+import news from '../../public/Screenshot2024-03-10220922.png'
+import prRealstate from '../../public/fernando-alvarez-rodriguez-M7GddPqJowg-unsplash.jpg'
+
+
+import express from '../../public/skills/icons8-express-js-50.png'
+import nextjs from '../../public/skills/icons8-nextjs-48.png'
+import tailwind from '../../public/skills/icons8-tailwind-css-48.png'
+import html from '../../public/skills/pngegg1.png'
+import css from '../../public/skills/pngegg2.png'
+import js from '../../public/skills/pngegg3.png'
+import ts from '../../public/skills/pngegg4.png'
+import react from '../../public/skills/pngegg5.png'
+import node from '../../public/skills/pngegg6.png'
+import mongo from '../../public/skills/pngegg7.png'
+import redux from '../../public/skills/pngegg8.png'
+import boot from '../../public/skills/pngegg9.png'
+import cpp from '../../public/skills/pngegg10.png'
+import java from '../../public/skills/pngegg11.png'
+import vite from '../../public/skills/icons8-vite-logo-48.png'
+
+import insta from '../../public/skills/instaGif.json'
+import github from '../../public/github.json'
+import tweet from '../../public/teitter.json'
+import linked from '../../public/linkedin.json'
+
+import cat from '../../public/cat.json'
+import thank from '../../public/thankyou.json'
+
+
+
+
+
 
 
 export default function Home() {
@@ -60,13 +70,11 @@ export default function Home() {
             <Link target="_blank" className='connL ' href={'https://www.instagram.com/all_this._its_not_me/'}>
             <Player
   autoplay
-  hover
-  // loop
-  // background='red'
+  loop
   src={insta}
   style={{width: '90px' }}
 >
-  {/* <Controls visible={true} buttons={['play', 'repeat', 'frame', 'debug']} /> */}
+
 </Player>
             </Link>
             <div className='connN opacity-0 -z-10 text-white absolute top-[35px] uppercase -left-8 normal bg-red-600 px-2 rounded-3xl'>
@@ -74,20 +82,47 @@ export default function Home() {
             </div>
             </div>
           <div className='relative connL rounded-3xl'>
-            <Link target="_blank" href={'https://github.com/DuragaPrasadSwain'}><Image src={github} alt='git' width={50} /></Link>
-            <div className='connN opacity-0 -z-10 text-white absolute top-[14px] uppercase -left-3 normal bg-red-600 px-2 rounded-3xl'>
+            <Link target="_blank" href={'https://github.com/DuragaPrasadSwain'}>
+            <Player
+  autoplay
+  loop
+  src={github}
+  style={{width: '50px' }}
+>
+  
+</Player>
+            </Link>
+            <div className='connN opacity-0 -z-10 text-white absolute top-[14px] uppercase -left-0 normal bg-red-600 px-2 rounded-3xl'>
               github
             </div>
             </div>
           <div className='relative connL rounded-3xl'>
-            <Link target="_blank" href={'https://twitter.com/durgaswain931'}> <Image src={tweet} alt='tweet' width={50} /> </Link>
-            <div className='connN opacity-0 -z-10 text-white absolute top-[14px] uppercase -left-5 normal bg-red-600 px-2 rounded-3xl'>
+            <Link target="_blank" href={'https://twitter.com/durgaswain931'}>
+            <Player
+  autoplay
+  loop
+  src={tweet}
+  style={{width: '70px' }}
+>
+  
+</Player>
+               </Link>
+            <div className='connN opacity-0 -z-10 text-white absolute top-[19px] uppercase -left-0 normal bg-red-600 px-2 rounded-3xl'>
               twitter
             </div>
             </div>
-          <div className='relative connL rounded-3xl'>
-            <Link target="_blank" href={'https://www.linkedin.com/in/durga-prasad-swain-a9578b209/'}> <Image src={linked} alt='link' width={50} /> </Link>
-            <div className='connN opacity-0 -z-10 text-white absolute top-[14px] uppercase -left-7 normal bg-red-600 px-2 rounded-3xl'>
+          <div className=' relative size-10 connL rounded-3xl'>
+            <Link target="_blank" href={'https://www.linkedin.com/in/durga-prasad-swain-a9578b209/'}> 
+            <Player className='absolute -top-8'
+  autoplay
+  loop
+  src={linked}
+  style={{width: '100px' , height:"100px" }}
+>
+  
+</Player>
+            </Link>
+            <div className='connN opacity-0 -z-10 text-white absolute top-[10px] uppercase -left-17 normal bg-red-600 px-2 rounded-3xl'>
               linkedin
             </div>
             </div>
@@ -367,12 +402,13 @@ export default function Home() {
       {/* PROJECTS */}
 
       <div className='relative'>
-
-        <div className='pointer-events-none -z-10 -top-20 bottom-0 ml-[87rem] origin-bottom-left rotate-90 sticky text-neutral-800 logo text-9xl'>
+{/* <div className='  bg-red-400'> */}
+        <span className='pointer-events-none -z-10 
+         top-48 bottom-0 sticky text-neutral-800 logo text-9xl'>
         {/* <div className='pointer-events-none -z-10 top-60 rotate-90 -right-64 absolute text-neutral-800 logo text-9xl'> */}
           PROJECTS
-        </div>
-
+        </span>
+        {/* </div> */}
         <div className=' h-[170vh] px-52'>
 
           <div className='z-30 ml-72 hover:scale-105  rounded-3xl bg-black w-[34rem] sticky top-20 bottom-0 hover:z-50 transition ease-in-out duration-500 lampsh'>
@@ -431,6 +467,27 @@ export default function Home() {
         </div>
 
 
+      </div>
+
+      {/* thank you page */}
+
+      <div className='h-screen flex items-center justify-center'>
+      <Player
+  autoplay
+  loop
+  src={thank}
+  style={{width: '500px' }}
+>
+
+</Player>
+      <Player
+  autoplay
+  loop
+  src={cat}
+  style={{width: '500px' }}
+>
+
+</Player>
       </div>
 
 
